@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное приглашение</title>
+    
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4; 
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .invitation-container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #ffffff; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Заголовки принудительно по центру */
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #222;
+            text-align: center; /* Центрирование */
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #555;
+            text-align: center; /* Текст тоже по центру */
+        }
+
+        .contrast-text {
+            font-size: 16px; 
+            font-weight: 500; 
+            color: #222; 
+            line-height: 1.7; 
+            max-width: 480px; 
+            margin: 0 auto 35px auto; 
+            text-align: center;
+        }
+
+        /* --- 1. Обложка --- */
+        .hero-image-section { padding: 0; margin: 0; background-color: transparent; width: 100%; }
+        .full-hero-image { width: 100%; height: auto; display: block; }
+
+        /* --- 2. Бумажное приглашение --- */
+        .paper-image-section { background-color: transparent; padding: 0; margin: 0; display: flex; justify-content: center; width: 100%; }
+        .full-paper-image { width: 100%; height: auto; display: block; }
+
+        /* --- 3. ТАЙМЕР --- */
+        .countdown-section { background-color: #ffffff; padding: 20px 15px 30px; text-align: center; }
+        .countdown-wrapper { display: flex; justify-content: center; gap: 20px; margin: 0 auto; }
+        .countdown-item { display: flex; flex-direction: column; align-items: center; color: #444; }
+        .countdown-number { font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 300; letter-spacing: 1px; line-height: 1.1; }
+        .countdown-label { font-size: 10px; text-transform: uppercase; color: #888; margin-top: 5px; letter-spacing: 1.5px; }
+
+        /* --- 4. Календарь --- */
+        .calendar-image-section { padding: 0; margin: 0; text-align: center; background-color: transparent; width: 100%; }
+        .full-calendar-image { width: 100%; height: auto; display: block; }
+
+        /* --- 5. Локация --- */
+        .location-image-section { padding: 0; margin: 0; background-color: transparent; width: 100%; }
+        .full-location-image { width: 100%; height: auto; display: block; }
+
+        /* --- 6. Новый блок (extra-block.png) --- */
+        .extra-image-section { padding: 0; margin: 0; background-color: transparent; width: 100%; }
+        .full-extra-image { width: 100%; height: auto; display: block; }
+
+        /* --- 7. Расписание --- */
+        .schedule-image-section { padding: 0; margin: 0; background-color: transparent; width: 100%; }
+        .full-schedule-image { width: 100%; height: auto; display: block; }
+
+        /* --- 8. Дресс-код --- */
+        .dresscode-section { background-color: #fff; padding: 50px 30px 60px; text-align: center; }
+        .color-palette { display: flex; justify-content: center; gap: 15px; margin: 0 auto; }
+        .color-circle { width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .color-1 { background-color: #dce4eb; }
+        .color-2 { background-color: #a3b8cc; }
+        .color-3 { background-color: #5e7c96; }
+        .color-4 { background-color: #2b4b6b; }
+        .color-5 { background-color: #0f2336; }
+
+        /* --- 9. Подарки --- */
+        .gifts-section { background-color: #fff; padding: 50px 30px 80px; text-align: center; }
+
+        @media (max-width: 480px) {
+            .dresscode-section, .gifts-section { padding: 30px 15px; }
+            .countdown-wrapper { gap: 12px; }
+            .countdown-number { font-size: 28px; } 
+            .countdown-label { font-size: 9px; }
+            .color-palette { gap: 10px; }
+            .color-circle { width: 40px; height: 40px; }
+            .contrast-text { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="invitation-container">
+
+    <!-- Блок 1: Обложка (hero.jpg) -->
+    <section class="hero-image-section">
+        <img src="hero.jpg" alt="Обложка" class="full-hero-image">
+    </section>
+
+    <!-- Блок 2: Бумажное приглашение (paper-bg.png) -->
+    <section class="paper-image-section">
+        <img src="paper-bg.png" alt="Приглашение" class="full-paper-image">
+    </section>
+
+    <!-- Блок 3: ТАЙМЕР -->
+    <section class="countdown-section">
+        <div class="countdown-wrapper" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">дней</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">часов</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">минут</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">секунд</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 4: Календарь (calendar.png) -->
+    <section class="calendar-image-section">
+        <img src="calendar.png" alt="Календарь" class="full-calendar-image">
+    </section>
+
+    <!-- Блок 5: Локация (location.png) -->
+    <section class="location-image-section">
+        <img src="location.png" alt="Локация" class="full-location-image">
+    </section>
+
+    <!-- Блок 6: Новый блок (extra-block.png) -->
+    <section class="extra-image-section">
+        <img src="extra-block.png" alt="Дополнительный блок" class="full-extra-image">
+    </section>
+
+    <!-- Блок 7: Расписание (schedule.png) -->
+    <section class="schedule-image-section">
+        <img src="schedule.png" alt="Свадебное расписание" class="full-schedule-image">
+    </section>
+
+    <!-- Блок 8: Дресс-код -->
+    <section class="dresscode-section">
+        <h2>Дресс-код</h2>
+        <p class="contrast-text">Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры:</p>
+        
+        <div class="color-palette">
+            <div class="color-circle color-1"></div>
+            <div class="color-circle color-2"></div>
+            <div class="color-circle color-3"></div>
+            <div class="color-circle color-4"></div>
+            <div class="color-circle color-5"></div>
+        </div>
+    </section>
+
+    <!-- Блок 9: Подарки -->
+    <section class="gifts-section">
+        <h2>Пожелания по подаркам</h2>
+        <p class="contrast-text">Ваше присутствие в день нашей свадьбы — самый значимый подарок для нас!</p>
+        <p class="contrast-text">Мы понимаем, что дарить цветы на свадьбу — это традиция, но мы не сможем насладиться их красотой в полной мере. Будем рады любой другой альтернативе (вино или в денежном эквиваленте).</p>
+    </section>
+
+</div>
+
+<!-- СКРИПТ ТАЙМЕРА -->
+<script>
+    const countToDate = new Date("2026-11-21T16:20:00").getTime();
+
+    const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const timeBetween = countToDate - now;
+
+        if (timeBetween < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "<h3>Мы поженились! 🎉</h3>";
+            return;
+        }
+
+        const days = Math.floor(timeBetween / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeBetween % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeBetween % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeBetween % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    }, 1000);
+</script>
+
+</body>
+</html>
